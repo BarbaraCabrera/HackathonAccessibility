@@ -46,10 +46,10 @@ function showSuccessAlert() {
     }
 }
 
-function mostrarBotones() {
+function mostrarBotones(event) {
 
-    document.querySelector('.check-button').classList.toggle('d-none');
-    document.querySelector('.move-button').classList.toggle('d-none');
+    event.target.querySelector('.check-button').classList.toggle('d-none');
+    event.target.querySelector('.move-button').classList.toggle('d-none');
     const container = document.getElementById('container');
 
     // Limpiar el contenido del contenedor
