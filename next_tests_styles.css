@@ -53,7 +53,7 @@ p {
 }
 
 
-.paint-lord-itself {
+.paint-caravaggio {
     background-color: red;
     position: absolute;
     height: 80px;
@@ -71,7 +71,7 @@ p {
     left: 35%;
 }
 
-.paint-right {
+.paint-velazquez {
     background-color: red;
     position: absolute;
     height: 325px;
