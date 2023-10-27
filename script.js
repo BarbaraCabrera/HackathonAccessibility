@@ -51,19 +51,6 @@ function mostrarBotones(event) {
     event.target.querySelector('.check-button').classList.toggle('d-none');
     event.target.querySelector('.move-button').classList.toggle('d-none');
     const container = document.getElementById('container');
-
-    // Limpiar el contenido del contenedor
-
-    // const verButton = document.createElement('button');
-    // verButton.textContent = 'Ver';
-    // verButton.onclick = () => mostrarTexto('ver');
-
-    // const moverButton = document.createElement('button');
-    // moverButton.textContent = 'Mover';
-    // moverButton.onclick = () => mostrarTexto('mover');
-
-    // container.appendChild(verButton);
-    // container.appendChild(moverButton);
 }
 
 function mostrarTexto(accion) {
