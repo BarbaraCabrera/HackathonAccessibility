@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Panel de Seguridad Virtual</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="panel">
+        <h1>Panel de Seguridad desactivación de Rayos</h1>
+        <p>Introduce el código de 4 dígitos:</p>
+        <input type="text" id="code-input" maxlength="4" readonly>
+        <div id="buttons">
+            <div class="button" onclick="appendToCode(1)" role="button" tabindex="0">1</div>
+            <div class="button" onclick="appendToCode(2)" role="button" tabindex="0">2</div>
+            <div class="button" onclick="appendToCode(3)" role="button" tabindex="0">3</div>
+            <div class="button" onclick="appendToCode(4)" role="button" tabindex="0">4</div>
+            <div class="button" onclick="appendToCode(5)" role="button" tabindex="0">5</div>
+            <div class="button" onclick="appendToCode(6)" role="button" tabindex="0">6</div>
+            <div class="button" onclick="appendToCode(7)" role="button" tabindex="0">7</div>
+            <div class="button" onclick="appendToCode(8)" role="button" tabindex="0">8</div>
+            <div class="button" onclick="appendToCode(9)" role="button" tabindex="0">9</div>
+            <div class="button" onclick="appendToCode(0)" role="button" tabindex="0">0</div>
+        </div>
+        <p id="message"></p>
+    </div>
+    <div>
+        <button aria-label="Pista: Haz clic para mostrar u ocultar la pista." class="button" id="hint-button" onclick="toggleHint()">Pista</button>
+    </div>  
+    <p id="hint-text" style="display: none;">1 hombre se maravilló en el museo al ver 8 hermosas pinturas de 8 de las 9 hermanas que tuvo.</p>
+</body>
+</html>

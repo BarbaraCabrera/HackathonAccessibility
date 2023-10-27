@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('museo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.d-none {
+    display: none;
+}
+
+.button-group {
+    display: flex;
+}
+
+#container {
+    background-color: red;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 38%;
+    left: 9%;
+}
+
+.transparent-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    height: 80px;
+    width: 80px;
+}
+
+.transparent-button:hover {
+    background-color: #fff;
+    color: #000;
+}
