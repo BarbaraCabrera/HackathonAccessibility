@@ -1,33 +1,48 @@
 function mostrarBotones(event) {
-    event.target.parentElement.querySelector('.check-button').classList.toggle('d-none');
-    event.target.parentElement.querySelector('.move-button').classList.toggle('d-none');
-    const container = document.getElementById('container');
+	document
+		.querySelectorAll('.check-button')
+		.forEach((button) => button.classList.add('d-none'));
+	document
+		.querySelectorAll('.move-button')
+		.forEach((button) => button.classList.add('d-none'));
 
-    // Limpiar el contenido del contenedor
+	event.target.parentElement
+		.querySelector('.check-button')
+		.classList.toggle('d-none');
+	event.target.parentElement
+		.querySelector('.move-button')
+		.classList.toggle('d-none');
+	const container = document.getElementById('container');
 
-    // const verButton = document.createElement('button');
-    // verButton.textContent = 'Ver';
-    // verButton.onclick = () => mostrarTexto('ver');
+	// Limpiar el contenido del contenedor
 
-    // const moverButton = document.createElement('button');
-    // moverButton.textContent = 'Mover';
-    // moverButton.onclick = () => mostrarTexto('mover');
+	// const verButton = document.createElement('button');
+	// verButton.textContent = 'Ver';
+	// verButton.onclick = () => mostrarTexto('ver');
 
-    // container.appendChild(verButton);
-    // container.appendChild(moverButton);
+	// const moverButton = document.createElement('button');
+	// moverButton.textContent = 'Mover';
+	// moverButton.onclick = () => mostrarTexto('mover');
+
+	// container.appendChild(verButton);
+	// container.appendChild(moverButton);
 }
 
 function main() {
-    document.querySelectorAll('.transparent-button').forEach(button => button.addEventListener('click', mostrarBotones))
+	document
+		.querySelectorAll('.transparent-button')
+		.forEach((button) => button.addEventListener('click', mostrarBotones));
 }
 
 main();
 
 function mostrarTexto(accion) {
-    const textoElement = document.getElementById('texto');
-    if (accion === 'ver') {
-        textoElement.textContent = 'Estás viendo un cuadro de una señora que mira hacia abajo, quizás sería interesante ver el cuadro que hay debajo.';
-    } else if (accion === 'mover') {
-        textoElement.textContent = 'Has movido el cuadro pero no hay nada detrás.';
-    }
+	const textoElement = document.getElementById('texto');
+	if (accion === 'ver') {
+		textoElement.textContent =
+			'Estás viendo un cuadro de una señora que mira hacia abajo, quizás sería interesante ver el cuadro que hay debajo.';
+	} else if (accion === 'mover') {
+		textoElement.textContent =
+			'Has movido el cuadro pero no hay nada detrás.';
+	}
 }
