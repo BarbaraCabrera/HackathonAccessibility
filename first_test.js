@@ -4,11 +4,14 @@ const correctCode = '1889';
 function appendToCode(digit) {
     if (code.length < 4) {
         code += digit;
-        document.getElementById('code-input').value = code;
+        document.getElementById('code-input').value = code;  
+    }
+
+    setTimeout(() => {
         if (code.length === 4) {
             checkCode();
         }
-    }
+    }, 500);
 }
 
 function checkCode() {
@@ -51,9 +54,10 @@ function toggleHint(help) {
 
 function showSuccessAlert() {
     const alertMessage = '¡Has resuelto el acertijo! ¿Estás listo para la siguiente prueba?';
-    const confirmationButton = 'Pasar a la siguiente prueba';
     
     if (confirm(alertMessage)) {
         window.location.href = 'next_tests.html';
+    }else{
+        resetCode();
     }
 }
