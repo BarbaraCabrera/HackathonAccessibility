@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,26 +12,26 @@
         <img class="img" src="./museo.png"/>
         <div class="content">
             <h1>¡Es hora de cometer un robo!</h1>
-            <p class="informacion" id="texto-botones"></p>
+            <p class="informacion" id="texto-botones" role="alert" aria-live="polite"></p>
         </div>
         <div class="paint-lady-down">
-            <button aria-label="Cuadro de una señora mirando hacia abajo, Autor desconocido" class="transparent-button" id="paint-lady"></button>
+            <button aria-label="Cuadro de una mujer mirando hacia abajo, Autor desconocido" class="transparent-button" id="paint-lady"></button>
             <div class="button-group">
-                <button aria-label="Ver cuadro" class="check-button d-none" onclick="mostrarTexto('view-paint-lady')">Ver</button>
-                <button aria-label="Movel cuadro" class="move-button d-none" onclick="mostrarTexto('move-paint-lady')">Mover</button>
+                <button aria-label="Ver cuadro desconocido" class="check-button d-none" onclick="mostrarTexto('view-paint-lady')">Ver</button>
+                <button aria-label="Mover cuadro desconocido" class="move-button d-none" onclick="mostrarTexto('move-paint-lady')">Mover</button>
             </div>
         </div>
 
         <div class="paint-caravaggio">
             <button aria-label="Cuadro Narciso, Caravaggio" class="transparent-button"></button>
             <div class="button-group">
-                <button aria-label="Ver cuadro" class="check-button d-none" onclick="mostrarTexto('view-paint-caravaggio')">Ver</button>
-                <button aria-label="Movel cuadro" class="move-button d-none" onclick="mostrarTexto('move-paint-caravaggio')">Mover</button>
+                <button aria-label="Ver cuadro Caravaggio" class="check-button d-none" onclick="mostrarTexto('view-paint-caravaggio')">Ver</button>
+                <button aria-label="Mover cuadro Caravaggio" class="move-button d-none" onclick="mostrarTexto('move-paint-caravaggio')">Mover</button>
             </div>
         </div>
 
         <div class="lamp">
-            <button aria-label="Cuadro señora mirando hacia abajo de autor desconocido" class="transparent-button" id="lamp" ></button>
+            <button aria-label="Lámpara de cristal colgante" class="transparent-button" id="lamp" ></button>
             <div class="button-group">
                 <button aria-label="Ver lámpara" class="check-button d-none" onclick="mostrarTexto('view-lamp')">Ver</button>
             </div>
@@ -40,8 +40,8 @@
         <div class="paint-velazquez">
             <button aria-label="Cuadro La Rendición de Breda, Velazquez" class="transparent-button" onclick="mostrarTexto('paint-velazquez')"></button>
             <div class="button-group">
-                <button aria-label="Ver cuadro" class="check-button d-none" onclick="mostrarTexto('view-paint-velazquez')">Ver</button>
-                <button aria-label="Movel cuadro" class="move-button d-none" onclick="mostrarTexto('move-paint-velazquez')">Mover</button>
+                <button aria-label="Ver cuadro Velazquez" class="check-button d-none" onclick="mostrarTexto('view-paint-velazquez')">Ver</button>
+                <button aria-label="Mover cuadro Velazquez" class="move-button d-none" onclick="mostrarTexto('move-paint-velazquez')">Mover</button>
             </div>
         </div>
     </div>

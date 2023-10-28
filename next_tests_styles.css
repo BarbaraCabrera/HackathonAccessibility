@@ -40,7 +40,6 @@ p {
 }
 
 .paint-lady-down {
-	background-color: red;
 	position: absolute;
 	height: 80px;
 	width: 80px;
@@ -49,7 +48,6 @@ p {
 }
 
 .paint-caravaggio {
-	background-color: red;
 	position: absolute;
 	height: 80px;
 	width: 80px;
@@ -58,7 +56,6 @@ p {
 }
 
 .lamp {
-	background-color: red;
 	position: absolute;
 	height: 160px;
 	width: 80px;
@@ -67,7 +64,6 @@ p {
 }
 
 .paint-velazquez {
-	background-color: red;
 	position: absolute;
 	height: 325px;
 	width: 200px;
@@ -79,18 +75,17 @@ p {
 	display: inline-block;
 	padding: 10px 20px;
 	background-color: transparent;
-	border: 2px solid #fff;
-	color: #fff;
 	text-decoration: none;
 	font-size: 16px;
 	transition: background-color 0.3s, color 0.3s;
 	height: 100%;
 	width: 100%;
+    border: none;
 }
 
 .transparent-button:hover {
-	background-color: #fff;
-	color: #000;
+	border: 2px solid #3498db;
+
 }
 
 .inventory {

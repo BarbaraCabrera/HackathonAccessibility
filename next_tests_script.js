@@ -45,27 +45,27 @@ function mostrarTexto(element) {
 			inventory.innerHTML = '';
 
 			textoElement.textContent =
-				'Has movido el cuadro y has descubierto que escondía una caja fuerde detrás. ¡Bien hecho!.';
+				'¡La caja fuerte! Has encontrado el diamante negro Orlov. Has coseguido tu misión y completado el escape room. ¡Ahora corre! Antes de que te pillen.';
 		} else {
-			textoElement.textContent = 'Bárbara, no tengo llave..';
+			textoElement.textContent = 'Has movido el cuadro y has descubierto que escondía una caja fuerde detrás. ¡Bien hecho!. Creo que ahora deberías buscar una llave.';
 		}
 	} else if (element === 'view-lamp') {
 		if (hasStick) {
+
 			textoElement.textContent =
-				'Ves un reflejo raro proveniente de la lámpara. Te fijas con mayor detenimiento y descubres que se trata de una llave. ¿Qué abrirá?';
+				'Ves un reflejo raro proveniente de la lámpara. Te fijas con mayor detenimiento y descubres que se trata de una llave. ¿Qué abrirá? Ahora la llave está en tu inventario.';
 
 			lampAction();
 		} else {
-			textoElement.textContent = 'No tengo llave, Bárbara, que hago?';
+			textoElement.textContent = 'Quizás deberías buscar algo para coger esa llave.';
 		}
 	} else if (element === 'view-paint-velazquez') {
 		textoElement.textContent =
-			'Estás viendo La Rendición de Breda. Un cuadro de Velazquez donde los personajes protagonistas llevan lanzas y palos de gran altura.';
+			'Estás viendo La Rendición de Breda. Un cuadro de Velazquez donde los personajes protagonistas llevan lanzas de gran altura y ganchos.';
 	} else if (element === 'move-paint-velazquez' && !hasStick) {
 		rightPaintAction();
-
 		textoElement.textContent =
-			'Has movido el cuadro y ha caído al suelo un palo con un gancho en su extremo. ¿Para qué puede servir?';
+			'Has movido el cuadro y ha caído al suelo un palo con un gancho en su extremo. ¿Para qué puede servir? Has metido el gancho en tu inventario.';
 	}
 }
 
