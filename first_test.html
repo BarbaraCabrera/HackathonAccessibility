@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="first_test.css">
     <title>Panel de Seguridad Virtual</title>
-    <script src="script.js"></script>
+    <script src="first_test.js"></script>
 </head>
 <body>
+    <div class="content-top">
+        <p>Sabes que el Director es un gran fan de Van Gogh y que su cuadro favorito es la noche estrellada. Quizás algú dato de 4 dígitos relacionado con ese cuadro sea la respuesta a nuestro problema.</p>
+    </div>
     <div class="panel">
         <h1>Panel de Seguridad desactivación de Rayos</h1>
         <p>Introduce el código de 4 dígitos:</p>
@@ -27,8 +30,9 @@
         <p id="message"></p>
     </div>
     <div>
-        <button aria-label="Pista: Haz clic para mostrar u ocultar la pista." class="button" id="hint-button" onclick="toggleHint()" role="alert" aria-live="polite">Pista</button>
+        <button aria-label="Pista: Haz clic para mostrar u ocultar la pista." class="button" onclick="toggleHint('hint-button')" role="alert" aria-live="polite">Pista</button>
+        <button aria-label="Pista: Haz clic para mostrar u ocultar la pista." class="button" id="hint-button-other" onclick="toggleHint('hint-button-other')" role="alert" aria-live="polite">Pista</button>
     </div>  
-    <p id="hint-text" style="display: none;">1 hombre se maravilló en el museo al ver 8 hermosas pinturas de 8 de las 9 hermanas que tuvo.</p>
+    <p id="hint-text" style="display: none;"></p>
 </body>
 </html>

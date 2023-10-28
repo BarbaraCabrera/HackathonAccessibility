@@ -5,12 +5,22 @@ body {
 	color: #fff;
 }
 
+.content-top {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-align: center;
+	top: 0;
+	left: 0.5;
+	width: 105%;
+}
+
 .panel {
 	background-color: #333;
 	border: 2px solid #777;
 	border-radius: 10px;
 	padding: 20px;
 	margin-bottom: 8px;
+	margin-top: 50px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 	display: inline-block;
 }

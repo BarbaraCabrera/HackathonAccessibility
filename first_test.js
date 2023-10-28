@@ -28,13 +28,25 @@ function resetCode() {
     }, 2000);
 }
 
-function toggleHint() {
+let lastHint = ''
+
+function toggleHint(help) {
     const hintText = document.getElementById('hint-text');
-    if (hintText.style.display === 'none') {
-        hintText.style.display = 'block';
-    } else {
+
+    if (help === lastHint && hintText.style.display !== 'none') {
         hintText.style.display = 'none';
+        return;
     }
+
+    lastHint = help;
+    
+        hintText.style.display = 'block';
+        if (help === "hint-button"){
+            hintText.textContent ="Quizás buscamos una fecha.";
+        }else{
+            hintText.textContent="1 hombre se maravilló en el museo al ver 8 hermosas pinturas de 8 de las 9 hermanas que tuvo.";       }
+    
+
 }
 
 function showSuccessAlert() {
@@ -43,21 +55,5 @@ function showSuccessAlert() {
     
     if (confirm(alertMessage)) {
         window.location.href = 'next_tests.html';
-    }
-}
-
-function mostrarBotones(event) {
-
-    event.target.querySelector('.check-button').classList.toggle('d-none');
-    event.target.querySelector('.move-button').classList.toggle('d-none');
-    const container = document.getElementById('container');
-}
-
-function mostrarTexto(accion) {
-    const textoElement = document.getElementById('texto');
-    if (accion === 'ver') {
-        textoElement.textContent = 'Estás viendo un cuadro de una señora que mira hacia abajo, quizás sería interesante ver el cuadro que hay debajo.';
-    } else if (accion === 'mover') {
-        textoElement.textContent = 'Has movido el cuadro pero no hay nada detrás.';
     }
 }
