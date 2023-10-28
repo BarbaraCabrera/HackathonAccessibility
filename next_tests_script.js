@@ -51,13 +51,11 @@ function mostrarTexto(element) {
 		}
 	} else if (element === 'view-lamp') {
 		if (hasStick) {
-
 			textoElement.textContent =
-				'Ves un reflejo raro proveniente de la lámpara. Te fijas con mayor detenimiento y descubres que se trata de una llave. ¿Qué abrirá? Ahora la llave está en tu inventario.';
-
+				'Al tener el gancho, ahora la llave está en tu inventario.';
 			lampAction();
 		} else {
-			textoElement.textContent = 'Quizás deberías buscar algo para coger esa llave.';
+			textoElement.textContent = 'Ves un reflejo raro proveniente de la lámpara. Te fijas con mayor detenimiento y descubres que se trata de una llave. ¿Qué abrirá? Quizás deberías buscar algo para coger esa llave.';
 		}
 	} else if (element === 'view-paint-velazquez') {
 		textoElement.textContent =
