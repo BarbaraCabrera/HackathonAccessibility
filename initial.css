@@ -43,3 +43,30 @@ p {
 	width: 818px;
 	margin: 0 auto;
 }
+
+.beginningButton {
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none; 
+	font-size: 18px;
+	padding: 10px;
+	cursor: pointer;
+	background-color: #666;
+	color: #fff;
+	border: 2px solid #555;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.beginningButton:focus {
+	outline: none;
+	border-color: #3498db;
+}
+
+.beginningButton:hover {
+	background-color: #777;
+}
+
+.beginningButton:active {
+	background-color: #555;
+}

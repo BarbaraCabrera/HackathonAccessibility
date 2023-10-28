@@ -42,7 +42,7 @@ function showSuccessAlert() {
     const confirmationButton = 'Pasar a la siguiente prueba';
     
     if (confirm(alertMessage)) {
-        window.location.href = 'siguiente_prueba.html';
+        window.location.href = 'next_tests.html';
     }
 }
 
