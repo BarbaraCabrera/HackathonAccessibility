@@ -12,7 +12,6 @@ function mostrarBotones(event) {
 	event.target.parentElement
 		.querySelector('.move-button')
 		.classList.toggle('d-none');
-	const container = document.getElementById('container');
 }
 
 function main() {
@@ -40,16 +39,63 @@ function mostrarTexto(element) {
 		textoElement.textContent =
 			'Estás viendo una pintura de Caravaggio llamada Narciso, en la que éste mira su propio reflejo.';
 	} else if (element === 'move-paint-caravaggio') {
-		textoElement.textContent =
-			'Has movido el cuadro y has descubierto que escondía una caja fuerde detrás. ¡Bien hecho!.';
+		if (hasKey) {
+			const inventory = document.querySelector('.inventory ul');
+
+			inventory.innerHTML = '';
+
+			textoElement.textContent =
+				'Has movido el cuadro y has descubierto que escondía una caja fuerde detrás. ¡Bien hecho!.';
+		} else {
+			textoElement.textContent = 'Bárbara, no tengo llave..';
+		}
 	} else if (element === 'view-lamp') {
-		textoElement.textContent =
-			'Ves un reflejo raro proveniente de la lámpara. Te fijas con mayor detenimiento y descubres que se trata de una llave. ¿Qué abrirá?';
+		if (hasStick) {
+			textoElement.textContent =
+				'Ves un reflejo raro proveniente de la lámpara. Te fijas con mayor detenimiento y descubres que se trata de una llave. ¿Qué abrirá?';
+
+			lampAction();
+		} else {
+			textoElement.textContent = 'No tengo llave, Bárbara, que hago?';
+		}
 	} else if (element === 'view-paint-velazquez') {
 		textoElement.textContent =
 			'Estás viendo La Rendición de Breda. Un cuadro de Velazquez donde los personajes protagonistas llevan lanzas y palos de gran altura.';
-	} else if (element === 'move-paint-velazquez') {
+	} else if (element === 'move-paint-velazquez' && !hasStick) {
+		rightPaintAction();
+
 		textoElement.textContent =
 			'Has movido el cuadro y ha caído al suelo un palo con un gancho en su extremo. ¿Para qué puede servir?';
 	}
 }
+
+function rightPaintAction() {
+	hasStick = true;
+
+	const inventory = document.querySelector('.inventory ul');
+
+	inventory.innerHTML = '';
+
+	const li = document.createElement('li');
+
+	li.textContent = 'gancho';
+
+	inventory.appendChild(li);
+}
+
+function lampAction() {
+	hasKey = true;
+	hasStick = false;
+
+	const inventory = document.querySelector('.inventory ul');
+
+	inventory.innerHTML = '';
+
+	const li = document.createElement('li');
+
+	li.textContent = 'llave';
+
+	inventory.appendChild(li);
+}
+
+function cleanInventory() {}
