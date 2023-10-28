@@ -11,9 +11,16 @@ body {
 	background-color: rgba(0, 0, 0, 0.5);
 	text-align: center;
 	top: 0;
-	left: 0.5;
 	width: 105%;
+	font-size: 2rem;
 }
+
+.content-top p {
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin-bottom: 40px
+}
+
 
 .content-bottom {
 	position: absolute;
@@ -23,6 +30,7 @@ body {
 	width: calc(100% - 50px);
 	padding: 25px;
 }
+
 
 h1 {
 	font-size: 2rem;

@@ -8,10 +8,14 @@ body {
 .content {
 	position: absolute;
 	background-color: rgba(0, 0, 0, 0.5);
-
 	text-align: center;
 	top: 0;
-	width: 100%;
+	width: 105%;
+}
+
+.content p {
+	font-size: 2.5rem;
+	font-weight: 600;
 }
 
 h1 {
@@ -29,6 +33,7 @@ p {
 	height: 100vh;
 	width: 818px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 .d-none {
