@@ -45,7 +45,7 @@ function mostrarTexto(element) {
 			inventory.innerHTML = '';
 
 			textoElement.textContent =
-				'¡La caja fuerte! Has encontrado el diamante negro Orlov. Has coseguido tu misión y completado el escape room. ¡Ahora corre! Antes de que te pillen.';
+				'¡La caja fuerte! Al tener la llave has abierto la caja fuerte y has encontrado el diamante negro de Orlov. Has coseguido tu misión y completado el escape room. ¡Ahora corre! Antes de que te pillen.';
 		} else {
 			textoElement.textContent = 'Has movido el cuadro y has descubierto que escondía una caja fuerde detrás. ¡Bien hecho!. Creo que ahora deberías buscar una llave.';
 		}
@@ -64,6 +64,10 @@ function mostrarTexto(element) {
 		rightPaintAction();
 		textoElement.textContent =
 			'Has movido el cuadro y ha caído al suelo un palo con un gancho en su extremo. ¿Para qué puede servir? Has metido el gancho en tu inventario.';
+	} else if (element === 'move-paint-velazquez' && hasStick) {
+		rightPaintAction();
+		textoElement.textContent =
+			'Ya tienes el gancho en el inventario. No hay nada más detrás del cuadro.';
 	}
 }
 
